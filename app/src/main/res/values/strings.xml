@@ -1,0 +1,23 @@
+<resources>
+    <string name="app_name">中南智充</string>
+    <string name="account_name">账号：</string>
+    <string name="balance">余额：</string>
+    <string name="mail">绑定的邮箱：</string>
+    <string name="refresh">刷新</string>
+    <string name="login">登录</string>
+    <string name="logout">注销</string>
+    <string name="register">注册</string>
+    <string name="dash">仪表板</string>
+    <string name="capacity">电池电量：</string>
+    <string name="needCharge">我要充电</string>
+    <string name="charging">正在充电</string>
+    <string name="password">密码：</string>
+    <string name="regist">注册</string>
+    <string name="welcome">登录以使用更多功能</string>
+    <string name="joinUs">欢迎加入我们</string>
+    <string name="passwordConfirm">确认密码：</string>
+    <string name="backToLogin">返回登录</string>
+    <string name="current">当前电流</string>
+    <string name="voltage">当前电压</string>
+    <string name="unCharging">未在充电</string>
+</resources>

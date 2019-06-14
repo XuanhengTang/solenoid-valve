@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <LinearLayout
+        android:id="@+id/tab1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <ListView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="400dp"
+            android:id="@+id/mapList">
+
+        </ListView>
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/refreshMapBtn"
+            android:text="@string/refresh"
+            android:background="@color/colorPrimary"
+            android:textColor="@color/whiteTextPrtime"
+            android:layout_marginTop="15dp"/>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/needChargeBtn"
+            android:text="@string/needCharge"
+            android:background="@color/warnPrime"
+            android:textColor="@color/whiteTextPrtime"
+            android:layout_marginTop="15dp"
+            android:onClick="startCharge"/>
+    </LinearLayout>
+</android.support.constraint.ConstraintLayout>

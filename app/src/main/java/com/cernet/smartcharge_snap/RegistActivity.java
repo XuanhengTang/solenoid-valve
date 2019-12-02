@@ -20,7 +20,7 @@ public class RegistActivity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.regist_layout);
         intent = getIntent();
-        capacity = intent.getDoubleExtra("capacity", 0.0);
+        capacity = intent.getDoubleExtra("rul", 0.0);
     }
 
 
@@ -32,7 +32,7 @@ public class RegistActivity extends Activity {
         mail = findViewById(R.id.mail);
         intent.putExtra("account", account.getText().toString());
         intent.putExtra("mail", mail.getText().toString());
-        intent.putExtra("capacity", capacity);
+        intent.putExtra("rul", capacity);
         startActivity(intent);
     }
 

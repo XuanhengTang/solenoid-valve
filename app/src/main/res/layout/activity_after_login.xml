@@ -35,6 +35,42 @@
                         android:layout_height="match_parent"
                         android:orientation="vertical">
 
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="15dp">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/BCUcount"
+                                android:textColor="@color/primeBlue" />
+
+                            <TextView
+                                android:id="@+id/count"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="1"
+                                android:gravity="right"/>
+                        </LinearLayout>
+
+                        <Button
+                            android:layout_width="150dp"
+                            android:layout_height="30dp"
+                            android:id="@+id/refreshMapBtn"
+                            android:text="@string/startMoni"
+                            android:background="@color/primeBlue"
+                            android:gravity="center"
+                            android:textColor="@color/whiteTextPrtime"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginBottom="10dp"
+                            android:onClick="startCharge"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/list"
+                            android:textColor="@color/primeBlue"
+                            android:layout_marginBottom="10dp"/>
                         <ListView
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
@@ -42,24 +78,6 @@
                             android:id="@+id/mapList">
 
                         </ListView>
-                        <Button
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:id="@+id/refreshMapBtn"
-                            android:text="@string/refresh"
-                            android:background="@color/colorPrimary"
-                            android:textColor="@color/whiteTextPrtime"
-                            android:layout_marginTop="15dp"/>
-
-                        <Button
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:id="@+id/needChargeBtn"
-                            android:text="@string/needCharge"
-                            android:background="@color/warnPrime"
-                            android:textColor="@color/whiteTextPrtime"
-                            android:layout_marginTop="15dp"
-                            android:onClick="startCharge"/>
                     </LinearLayout>
 
                     <LinearLayout
@@ -76,6 +94,23 @@
                                 android:layout_width="match_parent"
                                 android:layout_height="match_parent"
                                 android:orientation="vertical">
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="horizontal">
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="@string/curmoni"/>
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:textColor="@color/primeBlue"
+                                        android:id="@+id/curmoni"/>
+                                </LinearLayout>
                                 <LinearLayout
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
@@ -83,7 +118,7 @@
                                     <TextView
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
-                                        android:text="@string/capacity" />
+                                        android:text="@string/rul" />
 
                                     <TextView
                                         android:layout_width="wrap_content"
@@ -120,7 +155,7 @@
                                         android:layout_height="wrap_content"
                                         android:layout_marginBottom="15dp"
                                         android:layout_marginRight="10dp"
-                                        android:text="@string/current"/>
+                                        android:text="@string/reflactTime"/>
 
                                     <TextView
                                         android:id="@+id/currentTv"
@@ -135,7 +170,7 @@
                                     <TextView
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
-                                        android:text="@string/voltage"
+                                        android:text="@string/stableCurrent"
                                         android:gravity="right"
                                         android:layout_marginRight="10dp"
                                         android:layout_marginLeft="50dp"
@@ -160,15 +195,50 @@
                                     android:minHeight="300dp"
                                     android:layout_above="@+id/seekBar1"/>
 
-                                <com.github.mikephil.charting.charts.LineChart
-                                    android:id="@+id/chart2"
+
+                                <LinearLayout
                                     android:layout_width="match_parent"
-                                    android:layout_height="match_parent"
-                                    android:minHeight="300dp">
+                                    android:layout_height="wrap_content"
+                                    android:orientation="horizontal">
 
-                                </com.github.mikephil.charting.charts.LineChart>
+                                    <Button
+                                        android:layout_width="140dp"
+                                        android:layout_height="30dp"
+                                        android:id="@+id/YV258"
+                                        android:text="@string/YV258"
+                                        android:background="@color/primeBlue"
+                                        android:textColor="@color/whiteTextPrtime"
+                                        android:layout_marginTop="10dp"
+                                        android:enabled="false"
+                                        android:layout_marginBottom="10dp"
+                                        android:onClick="startMoni258"
+                                        />
 
+                                    <Button
+                                        android:layout_width="140dp"
+                                        android:layout_height="30dp"
+                                        android:id="@+id/YV263"
+                                        android:text="@string/YV263"
+                                        android:background="@color/primeBlue"
+                                        android:textColor="@color/whiteTextPrtime"
+                                        android:layout_marginTop="10dp"
+                                        android:layout_marginBottom="10dp"
+                                        android:onClick="startMoni263"
+                                        />
 
+                                    <Button
+                                        android:layout_width="140dp"
+                                        android:layout_height="30dp"
+                                        android:id="@+id/YV257"
+                                        android:text="@string/YV257"
+                                        android:background="@color/primeBlue"
+                                        android:textColor="@color/whiteTextPrtime"
+                                        android:layout_marginTop="10dp"
+                                        android:layout_marginBottom="10dp"
+                                        android:onClick="startMoni257"
+                                        />
+
+                                </LinearLayout>
 
 
                             </LinearLayout>
@@ -234,23 +304,6 @@
 
                                 <TextView
                                     android:id="@+id/mail"
-                                    android:layout_width="match_parent"
-                                    android:layout_height="wrap_content"
-                                    android:gravity="right"/>
-                            </LinearLayout>
-                            <LinearLayout
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:layout_margin="15dp">
-
-                                <TextView
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:text="@string/balance"
-                                    android:textColor="@color/colorPrimary" />
-
-                                <TextView
-                                    android:id="@+id/balance"
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
                                     android:gravity="right"/>
